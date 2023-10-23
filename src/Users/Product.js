@@ -45,7 +45,7 @@ const Product = () => {
   }
 
   useEffect(() => {
-
+    
    allProduct();
    allCategory();
     

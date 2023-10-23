@@ -5,6 +5,7 @@ const Logout = () => {
     const navigate  = useNavigate();
     localStorage.removeItem('checkUserLogin');
     navigate('/');
+    
 }
 
 export default Logout

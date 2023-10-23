@@ -17,6 +17,7 @@ import Logout from './Users/Logout';
 import { useEffect } from 'react';
 import Userauth from './Users/Userauth';
 function App() {
+     
 
      useEffect(()=>{
           Userauth();
@@ -26,8 +27,8 @@ function App() {
           <BrowserRouter>
                <Routes>
                     {/* user route */}
-                    <Route element={<Layout />}>
-                         <Route path='/' element={<Home />}></Route>
+                    <Route path='/' element={<Layout />}>
+                         <Route path='/' index element={<Home />}></Route>
                          <Route path='/product' element={<Product />}></Route>
                          <Route path='/product_details/:productId' element={<ProductDetails />}></Route>
                          <Route path='/logout' element={<Logout />}></Route>

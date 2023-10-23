@@ -1,13 +1,10 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Userauth from '../Users/Userauth'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
 const Header = () => {
-   
-   
-
     return (
       
             <>
@@ -28,15 +25,15 @@ const Header = () => {
                                     !Userauth() ? (
                                         <>
                                             <li className="nav-item">
-                                                <NavLink to='/login' className="nav-link active  text-white" aria-current="page" >Login</NavLink>
+                                                <Link to='/login' className="nav-link active  text-white" aria-current="page" >Login</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <NavLink to='/register' className="nav-link active  text-white" aria-current="page" >Register</NavLink>
+                                                <Link to='/register' className="nav-link active  text-white" aria-current="page" >Register</Link>
                                             </li>
                                         </>
                                     ) : (
                                         <li className="nav-item">
-                                            <NavLink to='/logout' className="nav-link active  text-white" aria-current="page" >Logout</NavLink>
+                                            <Link to='/logout' className="nav-link active  text-white" aria-current="page" >Logout</Link>
                                         </li>
                                     )
                                 }
@@ -44,22 +41,22 @@ const Header = () => {
 
 
                                 <li className="nav-item">
-                                    <NavLink to='/' className="nav-link active  text-white" aria-current="page" >Home</NavLink>
+                                    <Link to='/' className="nav-link active  text-white" aria-current="page" >Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink to='/product' className="nav-link text-white">Product</NavLink>
-                                </li>
-
-                                <li className="nav-item">
-                                    <NavLink className="nav-link text-white">Product Details</NavLink>
+                                    <Link to='/product' className="nav-link text-white">Product</Link>
                                 </li>
 
                                 <li className="nav-item">
-                                    <NavLink className="nav-link text-white" href="#">Cart</NavLink>
+                                    <Link className="nav-link text-white">Product Details</Link>
                                 </li>
 
                                 <li className="nav-item">
-                                    <NavLink className="nav-link text-white" href="#">Contact</NavLink>
+                                    <Link className="nav-link text-white" href="#">Cart</Link>
+                                </li>
+
+                                <li className="nav-item">
+                                    <Link className="nav-link text-white" href="#">Contact</Link>
                                 </li>
 
 
