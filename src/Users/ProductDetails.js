@@ -21,7 +21,7 @@ const ProductDetails = () => {
            
         } catch (err) {
             console.log(err);
-            return false;
+            return false; 
         }
     }
 
