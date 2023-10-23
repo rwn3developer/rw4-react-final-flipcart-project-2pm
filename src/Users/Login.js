@@ -2,10 +2,11 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
+
 const Login = () => {
 
     const navigate = useNavigate();
-
+   
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
 
@@ -16,14 +17,13 @@ const Login = () => {
 
        if(users.data.length === 0){
                 console.log("Email and Password not valid");
-                return false;
-                navigate('/')
+                navigate('/login')
                 
        }
        localStorage.setItem('checkUserLogin',JSON.stringify(users.data[0]));
        setEmail("");
        setPassword("");
-        navigate('/');
+       navigate('/product');
 
        }catch(err){
         console.log(err);

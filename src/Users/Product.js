@@ -3,6 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import Userauth from './Userauth';
 
 const Product = () => {
 
@@ -44,8 +45,10 @@ const Product = () => {
   }
 
   useEffect(() => {
-    allProduct();
-    allCategory();
+
+   allProduct();
+   allCategory();
+    
   }, [])
 
   return (
